@@ -1,99 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PARIS LUXURY</title>
+    <title>Task Manager</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
+        input[type="text"],
+        select {
+            padding: 10px; 
+        /* Adjust the padding as needed */
         }
-
-        .header {
-            text-align: left;
-            float: left;
-            color:aqua;
-            background-color: palevioletred;
-        }
-
-        .header a {
-            text-decoration: none;
-            color: #333;
-            margin-right: 20px;
-            font-weight: bold;
-            padding: 5px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
-        }
-
-        .header a:active {
-            background-color:aqua;
-            text-decoration: underline;
-        }
-        p:hover{
-            background-color:aqua;
-            font-family: fantasy;
-
-        }
-        .contact-container a:active {
-            background-color:aqua;
-            font-family: fantasy;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .image-container img {
-            height:350px;
-            width:250px;
-        }
-
-        .contact-container {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            text-align: center;
-            align-items: center;
-        }
-        h1:hover{
-            background-color:red;
-            color:beige;
-            text-decoration: dotted;
-            font-family: cursive;
-        }
+        body{
+            font-size:18px;
+    justify-content: space-between;
+    background-color:crimson;
+    color:wheat /* Adjust this value as needed */
+      }
+      .con{
+        margin:4px;
+        border:5px solid rgb(6, 81, 87);
+        padding: 20px;
+        background-color:wheat;
+        color: crimson;
+}
+img{
+    height: 250px;
+    width: 480px;
+    float:right;
+}
+      
 
     </style>
 </head>
 <body>
-    <h1>PARIS LAXURY</h1>
-    <div class="header">
-        <ol>
-        <a href="#">Home</a><br>
-        <a href="#">About Us</a><br>
-        <a href="#">Services Provided</a>
-        </ol>
-    </div>
-    
-    <div class="image-container">
-        <img src="https://media.weddingz.in/images/8c611b73f2b33a8108871c8ac6ffc61d/top-5-indian-bridal-make-up-trends-2017.jpg" alt="img 1">
-        <img src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/12/blog-cover-22-8.png" alt="img 2">
-        <img src="https://media.istockphoto.com/id/1147811403/photo/business-woman-lady-boss-in-beauty-salon-making-hairdress-and-looking-to-the-mirror.jpg?s=612x612&w=0&k=20&c=WmL2VgSEdUPI7W0ogFHuRtBsL0BFT6KYdLJ7cuadmHk=" alt="img 3">
-        <img src="data:image/jpeg;base64,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" alt="img 4">
-        <img src="https://sp-ao.shortpixel.ai/client/q_lossy,ret_img,w_735,h_400/https://www.applesalon.in/offers/wp-content/uploads/2020/09/blog-banner_Pamper-yourself-with-Pedicure-to-give-your-feet-great-relief.-735x400.jpg" alt="img 5">
-    </div>
+    <h1 style="text-align: center;">PARIS LUXURY TASK MANAGER </h1>
+    <p style="font-style: italic;">Setting up a task manager for a beauty parlour website is essential for ensuring the smooth and organized operation of the online platform. A well-structured task manager allows the beauty parlour's team to efficiently track and manage various aspects of website development, maintenance, and marketing. With a task manager in place, tasks such as web design, content updates, SEO optimization, and social media integration can be clearly defined, assigned to responsible team members, and provided with deadlines. This system not only enhances communication and collaboration within the team but also ensures that important website-related activities are completed on time, contributing to a positive user experience and the overall success of the beauty parlour's online presence. Whether it's launching a new feature, scheduling regular maintenance, or implementing marketing campaigns, a task manager serves as a vital tool for keeping the website running smoothly and meeting the parlour's business goals.</p><br>
+    <div class=con>
+        <img src="https://images.pexels.com/photos/705255/pexels-photo-705255.jpeg?auto=compress&cs=tinysrgb&w=600">
+    <label for="task">Task:&nbsp;&nbsp;</label>
+    <input type="text" id="task" placeholder="Task" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="label">Label:&nbsp;</label>
+    <input type="text" id="label" placeholder="Label" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="urgency">Urgency:</label>
+    <select id="urgency">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select><br><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="importance">Importance:</label>
+    <select id="importance">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="dependentTask">Dependent on Task:</label>
+    <input type="text" id="dependentTask" placeholder="Task name" /><br><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="deadline">Deadline:&nbsp;</label>
+    <input type="date" id="deadline" /><br><br><br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="addTask()" style="background-color:crimson;"> Add Task</button>
+   </div>
+    <h2 style="text-align: center; color: black;">TASK LIST</h2>
+    <ul id="task-list"></ul>
 
-    <div class="contact-container">
-        <div class="s">
-        <a href="#">Contact Us</a>
-        <p>Feel free to get in touch with us!</p>
-    </div>
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            const taskInput = document.getElementById("task");
+            const deadlineInput = document.getElementById("deadline");
+            const labelInput = document.getElementById("label");
+            const urgencyInput = document.getElementById("urgency");
+            const importanceInput = document.getElementById("importance");
+            const dependentTaskInput = document.getElementById("dependentTask");
+
+            const taskText = taskInput.value.trim();
+            const deadline = deadlineInput.value;
+            const label = labelInput.value.trim();
+            const urgency = urgencyInput.value;
+            const importance = importanceInput.value;
+            const dependentTask = dependentTaskInput.value.trim();
+
+            if (taskText !== "") {
+                const task = {
+                    text: taskText,
+                    deadline: deadline,
+                    label: label,
+                    urgency: urgency,
+                    importance: importance,
+                    dependentTask: dependentTask,
+                    completed: false,
+                };
+
+                tasks.push(task);
+                taskInput.value = "";
+                deadlineInput.value = "";
+                labelInput.value = "";
+                urgencyInput.value = "low";
+                importanceInput.value = "low";
+                dependentTaskInput.value = "";
+                displayTasks();
+            }
+        }
+
+        function toggleCompleted(index) {
+            tasks[index].completed = !tasks[index].completed;
+            displayTasks();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            displayTasks();
+        }
+
+        function displayTasks() {
+            const taskList = document.getElementById("task-list");
+            taskList.innerHTML = "";
+
+            tasks.forEach((task, index) => {
+                const taskItem = document.createElement("li");
+                taskItem.innerHTML = `
+                    <span class="${task.completed ? 'completed' : ''}">
+                        ${task.text} (Deadline: ${task.deadline}, Label: ${task.label}, Urgency: ${task.urgency}, Importance: ${task.importance}, Dependent on: ${task.dependentTask})
+                    </span>
+                    <button onclick="toggleCompleted(${index})">Toggle Completed</button>
+                    <button onclick="deleteTask(${index})">Delete</button>
+                `;
+
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        displayTasks();
+    </script>
 </body>
 </html>
